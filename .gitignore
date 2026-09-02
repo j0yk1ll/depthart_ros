@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+
+# ROS / colcon
+build/
+install/
+log/
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+
+# Local model/checkpoint data
+checkpoints/
+*.pth
+*.pt
+*.onnx
+*.engine

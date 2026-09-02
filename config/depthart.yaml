@@ -1,0 +1,18 @@
+/**:
+  ros__parameters:
+    image_topic: /camera/image_rect
+    camera_info_topic: /camera/camera_info
+    depth_topic: /depthart/depth
+
+    depthart_root: /opt/DepthART
+    checkpoint: checkpoints/metric/depthart_metric_indoor_s_448.pth
+    encoder: S
+    domain: indoor
+    device: auto
+    optimized_scan: true
+
+    model_width: 640
+    model_height: 480
+
+    intrinsics_source: p
+    stats_period_sec: 5.0
