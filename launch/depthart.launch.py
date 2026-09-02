@@ -20,11 +20,22 @@ def generate_launch_description():
             default_value=default_config,
             description="Path to DepthART ROS parameter YAML file.",
         ),
+        DeclareLaunchArgument(
+            "device",
+            default_value="cpu",
+            choices=["cpu", "cuda", "auto"],
+            description="DepthART inference device.",
+        ),
         Node(
             package="depthart_ros",
             executable="depthart_node",
             name="depthart",
             output="screen",
-            parameters=[LaunchConfiguration("config")],
+            parameters=[
+                LaunchConfiguration("config"),
+                {
+                    "device": LaunchConfiguration("device"),
+                },
+            ],
         ),
     ])

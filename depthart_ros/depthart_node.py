@@ -42,7 +42,7 @@ class DepthARTNode(Node):
         )
         self.declare_parameter("encoder", "S")
         self.declare_parameter("domain", "indoor")
-        self.declare_parameter("device", "auto")
+        self.declare_parameter("device", "cpu")
         self.declare_parameter("optimized_scan", True)
         self.declare_parameter("model_width", 640)
         self.declare_parameter("model_height", 480)
@@ -116,8 +116,10 @@ class DepthARTNode(Node):
         self.model.eval()
 
         optimized = False
-        if self.optimized_scan_requested:
+        if self.optimized_scan_requested and self.device == "cuda":
             optimized = self._enable_optimized_scan(tvimblock)
+        elif self.optimized_scan_requested:
+            self.get_logger().info("Optimized selective scan disabled on CPU")
         self.get_logger().info(
             "Selective scan: "
             + ("optimized CUDA extension" if optimized else "reference fallback")

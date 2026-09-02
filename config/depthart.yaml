@@ -8,7 +8,7 @@
     checkpoint: checkpoints/metric/depthart_metric_indoor_s_448.pth
     encoder: S
     domain: indoor
-    device: auto
+    device: cpu
     optimized_scan: true
 
     model_width: 640
