@@ -17,8 +17,8 @@ setup(
     ],
     install_requires=["setuptools"],
     zip_safe=True,
-    maintainer="Kevin",
-    maintainer_email="kevin@example.com",
+    maintainer="Kevin Raetz",
+    maintainer_email="kevinraetz1992@gmail.com",
     description="ROS 2 integration for DepthART metric monocular depth inference.",
     license="Apache-2.0",
     entry_points={

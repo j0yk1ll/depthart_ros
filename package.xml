@@ -4,8 +4,7 @@
   <version>0.1.0</version>
   <description>ROS 2 integration for DepthART metric monocular depth inference.</description>
 
-  <!-- Replace this before the first public release. -->
-  <maintainer email="kevin@example.com">Kevin</maintainer>
+  <maintainer email="kevinraetz1992@gmail.com">Kevin Raetz</maintainer>
   <license>Apache-2.0</license>
 
   <buildtool_depend>ament_python</buildtool_depend>
